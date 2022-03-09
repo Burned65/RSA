@@ -177,16 +177,27 @@ def oaep():
     print(f"reverse transformed message: {m.decode()}")
 
 
-if __name__ == '__main__':
-    """p, q = 7, 11
+def rsa():
+    p, q = 7, 11
     n = int(p * q)
     e = 53
     d = calculate_d(p, q, e)
     print(f"{d = }")
-    x = 30
+    x = 28
     y = encrypt(x, e, n)
     print(f"encrypted: {y = }")
     x = decrypt(y, d, n)
-    print(f"decrypted: {x = }")"""
-    # print(difference_of_squares(20353*41851))
+    print(f"decrypted: {x = }")
+
+
+def calc_difference_of_squares():
+    print(difference_of_squares(20353 * 41851))
+
+
+if __name__ == '__main__':
+    print("rsa:")
+    rsa()
+    print("\ndifferene of squares:")
+    calc_difference_of_squares()
+    print("\noaep:")
     oaep()
